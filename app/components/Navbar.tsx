@@ -43,6 +43,13 @@ export default function Navbar() {
               La routine
             </a>
             <a
+              href="/prototype"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#FF6B35] hover:text-[#D63900] transition-colors"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#FF6B35] animate-pulse"></span>
+              <span>Prototype App</span>
+            </a>
+            <a
               href="#faq"
               className="text-sm font-bold text-[#475569] hover:text-[#FF6B35] transition-colors"
             >
@@ -51,7 +58,13 @@ export default function Navbar() {
           </nav>
 
           {/* CTA Header */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="/prototype"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border-2 border-[#1E293B] bg-white text-[#0F172A] font-bold text-sm hover:bg-[#F8FAFC] transition-all shadow-[2px_2px_0px_0px_#1E293B]"
+            >
+              <span>Tester le prototype</span>
+            </a>
             <a
               href="#waitlist"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1E293B] text-white font-bold text-sm hover:bg-[#FF6B35] transition-all shadow-[3px_3px_0px_0px_#FF6B35] hover:shadow-[1px_1px_0px_0px_#1E293B] active:translate-y-0.5"
@@ -104,6 +117,14 @@ export default function Navbar() {
             className="block px-3 py-2 rounded-lg text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
           >
             FAQ
+          </a>
+          <a
+            href="/prototype"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center justify-between px-3 py-2.5 rounded-xl text-base font-bold text-[#D63900] bg-[#FFF2EB] border border-[#FF6B35]"
+          >
+            <span>Tester le prototype interactif</span>
+            <span className="text-xs bg-[#FF6B35] text-white px-2 py-0.5 rounded-md">Démo</span>
           </a>
           <div className="pt-2">
             <a

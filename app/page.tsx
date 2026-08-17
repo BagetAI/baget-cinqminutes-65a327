@@ -79,6 +79,33 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* Prototype Quick Access Banner */}
+          <div className="max-w-4xl mx-auto px-4 mt-8">
+            <div className="bg-white p-4 sm:p-5 rounded-2xl border-2 border-[#1E293B] shadow-[4px_4px_0px_0px_#1E293B] flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3 text-left">
+                <div className="w-10 h-10 rounded-xl bg-[#FFF2EB] border-2 border-[#FF6B35] flex items-center justify-center shrink-0 text-[#FF6B35]">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-wider text-[#D63900]">
+                    Prototype Interactif Déployé
+                  </div>
+                  <h4 className="text-sm sm:text-base font-extrabold text-[#0F172A]">
+                    Testez l'expérience apprenant avec le minuteur de 5 min et le parcours 30 jours.
+                  </h4>
+                </div>
+              </div>
+
+              <a
+                href="/prototype"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#FF6B35] hover:bg-[#E55A25] text-white font-bold text-xs sm:text-sm whitespace-nowrap border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0"
+              >
+                <span>Accéder au prototype</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* =========================================================================
