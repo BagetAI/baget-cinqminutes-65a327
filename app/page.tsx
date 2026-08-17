@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import WaitlistForm from "./components/WaitlistForm";
 import FaqAccordion from "./components/FaqAccordion";
+import PricingSection from "./components/PricingSection";
 import GsapAnimations from "./components/GsapAnimations";
 import {
   Sparkles,
@@ -383,7 +384,12 @@ export default function Home() {
         </section>
 
         {/* =========================================================================
-            SECTION 5 : FAQ ACCORDION
+            SECTION 5 : LES TARIFS & FORMULES (3 Paliers)
+           ========================================================================= */}
+        <PricingSection />
+
+        {/* =========================================================================
+            SECTION 6 : FAQ ACCORDION
            ========================================================================= */}
         <section id="faq" className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">

@@ -43,6 +43,12 @@ export default function Navbar() {
               La routine
             </a>
             <a
+              href="#tarifs"
+              className="text-sm font-bold text-[#475569] hover:text-[#FF6B35] transition-colors"
+            >
+              Tarifs
+            </a>
+            <a
               href="/prototype"
               className="inline-flex items-center gap-1.5 text-sm font-bold text-[#FF6B35] hover:text-[#D63900] transition-colors"
             >
@@ -66,10 +72,10 @@ export default function Navbar() {
               <span>Tester le prototype</span>
             </a>
             <a
-              href="#waitlist"
+              href="#tarifs"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1E293B] text-white font-bold text-sm hover:bg-[#FF6B35] transition-all shadow-[3px_3px_0px_0px_#FF6B35] hover:shadow-[1px_1px_0px_0px_#1E293B] active:translate-y-0.5"
             >
-              <span>Accès pilote</span>
+              <span>Voir les formules</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -110,6 +116,13 @@ export default function Navbar() {
             className="block px-3 py-2 rounded-lg text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
           >
             La routine
+          </a>
+          <a
+            href="#tarifs"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-lg text-base font-bold text-[#0F172A] hover:bg-[#F8FAFC]"
+          >
+            Tarifs & Formules
           </a>
           <a
             href="#faq"

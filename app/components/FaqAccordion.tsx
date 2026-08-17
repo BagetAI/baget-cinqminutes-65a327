@@ -34,6 +34,21 @@ const FAQ_ITEMS: FaqItem[] = [
     answer:
       "L'inscription sur la liste d'attente reserve votre place pour le premier groupe pilote. Vous recevrez vos acces et la premiere lecon directement des le lancement.",
   },
+  {
+    question: "Puis-je changer d'offre ou resilier a tout moment ?",
+    answer:
+      "Oui, la Formule Autonome est sans engagement de duree. Vous pouvez resilier votre abonnement mensuel ou annuel a tout moment en un clic depuis vos parametres. Pour les formules Promotion Guidee et Accompagnement Pro, il s'agit d'un reglement forfaitaire unique incluant l'acces et le suivi.",
+  },
+  {
+    question: "Comment fonctionne l'essai gratuit de 7 jours ?",
+    answer:
+      "Vous profitez d'un acces integral et illimite a l'application, au minuteur et aux 60 lecons pendant 7 jours complets sans prelevement. Vous pouvez tester la methode et generer vos premiers livrables avant de confirmer votre abonnement.",
+  },
+  {
+    question: "Fournissez-vous une facture avec TVA pour les frais professionnels ?",
+    answer:
+      "Oui, une facture conforme est automatiquement emise et telechargeable lors de chaque reglement, que vous soyez particulier, freelance ou societe.",
+  },
 ];
 
 export default function FaqAccordion() {
