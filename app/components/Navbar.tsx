@@ -66,16 +66,16 @@ export default function Navbar() {
           {/* CTA Header */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="/prototype"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border-2 border-[#1E293B] bg-white text-[#0F172A] font-bold text-sm hover:bg-[#F8FAFC] transition-all shadow-[2px_2px_0px_0px_#1E293B]"
+              href="/sign-in"
+              className="text-sm font-bold text-[#1E293B] hover:text-[#FF6B35] transition-colors px-2"
             >
-              <span>Tester le prototype</span>
+              Connexion
             </a>
             <a
-              href="#tarifs"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1E293B] text-white font-bold text-sm hover:bg-[#FF6B35] transition-all shadow-[3px_3px_0px_0px_#FF6B35] hover:shadow-[1px_1px_0px_0px_#1E293B] active:translate-y-0.5"
+              href="/sign-up"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#FF6B35] text-white font-bold text-sm hover:bg-[#E55A25] transition-all shadow-[3px_3px_0px_0px_#1E293B] hover:shadow-[1px_1px_0px_0px_#1E293B] active:translate-y-0.5"
             >
-              <span>Voir les formules</span>
+              <span>Accéder à l'application</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -139,13 +139,20 @@ export default function Navbar() {
             <span>Tester le prototype interactif</span>
             <span className="text-xs bg-[#FF6B35] text-white px-2 py-0.5 rounded-md">Démo</span>
           </a>
-          <div className="pt-2">
+          <div className="pt-2 space-y-2">
             <a
-              href="#waitlist"
+              href="/sign-in"
+              onClick={() => setIsOpen(false)}
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-[#1E293B] bg-white text-[#0F172A] font-bold text-sm"
+            >
+              <span>Se connecter</span>
+            </a>
+            <a
+              href="/sign-up"
               onClick={() => setIsOpen(false)}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF6B35] text-white font-bold text-base shadow-[3px_3px_0px_0px_#1E293B]"
             >
-              <span>Rejoindre la première session</span>
+              <span>Créer un compte & Démarrer</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

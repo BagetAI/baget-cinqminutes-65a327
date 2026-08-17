@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Prototype Quick Access Banner */}
+          {/* Quick Access Banner */}
           <div className="max-w-4xl mx-auto px-4 mt-8">
             <div className="bg-white p-4 sm:p-5 rounded-2xl border-2 border-[#1E293B] shadow-[4px_4px_0px_0px_#1E293B] flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-3 text-left">
@@ -90,21 +90,29 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-wider text-[#D63900]">
-                    Prototype Interactif Déployé
+                    Application en ligne
                   </div>
                   <h4 className="text-sm sm:text-base font-extrabold text-[#0F172A]">
-                    Testez l'expérience apprenant avec le minuteur de 5 min et le parcours 30 jours.
+                    Rejoignez votre espace apprenant avec le minuteur de 5 min et vos 30 micro-actions.
                   </h4>
                 </div>
               </div>
 
-              <a
-                href="/prototype"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#FF6B35] hover:bg-[#E55A25] text-white font-bold text-xs sm:text-sm whitespace-nowrap border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0"
-              >
-                <span>Accéder au prototype</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
+              <div className="flex items-center gap-2.5 w-full sm:w-auto">
+                <a
+                  href="/sign-up"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#FF6B35] hover:bg-[#E55A25] text-white font-bold text-xs sm:text-sm whitespace-nowrap border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0"
+                >
+                  <span>Créer mon compte</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <a
+                  href="/prototype"
+                  className="hidden md:inline-flex px-3.5 py-2 rounded-xl border border-[#CBD5E1] bg-white text-[#475569] hover:text-[#0F172A] text-xs font-bold transition-colors"
+                >
+                  <span>Démo</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
