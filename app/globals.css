@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #F8FAFC;
+  --ink: #0F172A;
+  --accent: #FF6B35;
+  --on-accent: #FFFFFF;
+  --accent-ink: #D63900;
+  --accent-soft: #FFF2EB;
+  --primary: #1E293B;
+  --surface: #FFFFFF;
+  --surface-alt: #F1F5F9;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display), cursive, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Custom utility classes */
+.bg-coral {
+  background-color: #FF6B35;
+}
+.text-coral {
+  color: #FF6B35;
+}
+.text-coral-ink {
+  color: #D63900;
+}
+.bg-coral-soft {
+  background-color: #FFF2EB;
+}
+.border-coral {
+  border-color: #FF6B35;
+}
+.border-coral-soft {
+  border-color: #FFD6C4;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
