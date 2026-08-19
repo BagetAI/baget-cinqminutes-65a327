@@ -1,24 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Check,
   Sparkles,
-  Zap,
   ArrowRight,
   ShieldCheck,
   Users,
   UserCheck,
-  MessageSquare,
   HelpCircle,
-  Clock,
   Layers,
   FileCheck,
   Award,
   CreditCard,
-  Lock,
   ChevronDown,
-  Info,
 } from "lucide-react";
 import OrderContactModal from "./OrderContactModal";
 
@@ -43,34 +38,34 @@ export default function PricingSection() {
 
   const comparisonRows = [
     {
-      category: "Accès Logiciel & Pédagogie",
+      category: "Application & Outils",
       features: [
         {
-          name: "Accès illimité à l'application web & mobile",
+          name: "Accès complet app web & mobile",
           autonome: "Inclus",
           guidee: "Inclus",
           pro: "Inclus",
         },
         {
-          name: "60 leçons interactives (format 5 min / jour)",
+          name: "60 micro-leçons (5 min / jour)",
           autonome: "Inclus",
           guidee: "Inclus",
           pro: "Inclus",
         },
         {
-          name: "Minuteur 5 min, séries (streaks) et XP",
+          name: "Minuteur 5 min & séries (streaks)",
           autonome: "Inclus",
           guidee: "Inclus",
           pro: "Inclus",
         },
         {
-          name: "Générateur automatique d'actifs (One-Pager, devis, CGV)",
+          name: "Générateurs (One-Pager, devis, CGV)",
           autonome: "Inclus",
           guidee: "Inclus",
           pro: "Inclus",
         },
         {
-          name: "Export complet du Dossier Projet en PDF",
+          name: "Export PDF du dossier de création",
           autonome: "Illimité",
           guidee: "Illimité",
           pro: "Illimité",
@@ -78,108 +73,108 @@ export default function PricingSection() {
       ],
     },
     {
-      category: "Animation & Dynamique Collective",
+      category: "Dynamique Collective & Retours",
       features: [
         {
-          name: "Groupe privé de promotion (cohorte 25 créateurs max)",
+          name: "Groupe privé de cohorte (25 créateurs max)",
           autonome: "—",
           guidee: "Inclus",
           pro: "Inclus",
         },
         {
-          name: "4 revues asynchrones de vos livrables par semaine",
+          name: "Revues asynchrones des livrables",
           autonome: "—",
-          guidee: "Inclus (par l'équipe)",
-          pro: "Inclus (prioritaire)",
+          guidee: "4 / semaine",
+          pro: "Prioritaire",
         },
         {
-          name: "Sprint hebdomadaire en direct et sessions de déblocage",
+          name: "Sprint live hebdo de déblocage",
           autonome: "—",
-          guidee: "Inclus (4 ateliers)",
-          pro: "Inclus (accès VIP)",
+          guidee: "4 ateliers",
+          pro: "Accès VIP",
         },
         {
-          name: "Cérémonie de lancement et mise en réseau",
-          autonome: "—",
-          guidee: "Inclus",
-          pro: "Inclus",
+          name: "Accès SaaS offert",
+          autonome: "Abonnement",
+          guidee: "3 mois inclus",
+          pro: "6 mois inclus",
         },
       ],
     },
     {
-      category: "Accompagnement Sur-Mesure 1-on-1",
+      category: "Mentorat Individuel",
       features: [
         {
-          name: "Diagnostic individuel de votre offre (session 45 min)",
+          name: "Diagnostic 1-on-1 en visio (45 min)",
           autonome: "—",
           guidee: "—",
-          pro: "1 session 1-on-1 vidéo",
+          pro: "1 session",
         },
         {
-          name: "Relecture et validation du dossier d'immatriculation INPI",
-          autonome: "Checklist guidée",
-          guidee: "Revue collective",
-          pro: "Validation ligne à ligne",
+          name: "Relecture personnalisée de l'offre",
+          autonome: "—",
+          guidee: "Revue groupe",
+          pro: "Sur-mesure",
+        },
+        {
+          name: "Validation du dossier INPI",
+          autonome: "Checklist",
+          guidee: "Revue groupe",
+          pro: "Validation directe",
         },
         {
           name: "Support direct dédié par messagerie",
           autonome: "Email standard",
-          guidee: "Canal de promotion",
-          pro: "Canal prioritaire 5j/7",
-        },
-        {
-          name: "Durée d'accès SaaS incluse",
-          autonome: "Abonnement actif",
-          guidee: "3 mois offerts",
-          pro: "6 mois offerts",
+          guidee: "Canal promo",
+          pro: "Canal direct 5j/7",
         },
       ],
     },
   ];
 
   return (
-    <section id="tarifs" className="py-20 sm:py-28 bg-[#F8FAFC] border-t-2 border-[#1E293B] relative">
+    <section id="tarifs" className="py-16 sm:py-24 bg-[#F8FAFC] border-t-2 border-[#1E293B] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* =========================================================================
             HEADER : TITLE & SUBTITLE
            ========================================================================= */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF2EB] border-2 border-[#FF6B35] text-[#D63900] font-bold text-xs sm:text-sm uppercase tracking-wider mb-4 shadow-sm">
-            <CreditCard className="w-4 h-4 text-[#FF6B35]" />
-            <span>Tarifs transparents • Zéro engagement caché</span>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFF2EB] border border-[#FF6B35] text-[#D63900] font-bold text-xs uppercase tracking-wider mb-3">
+            <CreditCard className="w-3.5 h-3.5 text-[#FF6B35]" />
+            <span>Tarifs clairs • Sans engagement</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#0F172A] font-display tracking-tight leading-tight">
-            Choisissez la formule adaptée à votre rythme.
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#0F172A] font-display tracking-tight">
+            Des formules adaptées à votre rythme
           </h2>
 
-          <p className="text-[#475569] text-base sm:text-lg mt-4 font-medium leading-relaxed">
-            De l'autonomie totale au mentorat individuel, une méthode claire pour valider votre offre et décrocher vos premiers clients sans perdre de temps.
+          <p className="text-[#475569] text-base sm:text-lg mt-3 font-medium">
+            Passez de l'idée aux premiers clients avec le niveau d'accompagnement adapté à vos besoins.
           </p>
 
-          {/* Billing Interval Toggle for Autonome */}
-          <div className="mt-8 inline-flex items-center p-1.5 rounded-2xl bg-white border-2 border-[#1E293B] shadow-[3px_3px_0px_0px_#1E293B]">
+          {/* Billing Interval Toggle */}
+          <div className="mt-6 inline-flex items-center p-1 rounded-2xl bg-white border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B]">
             <button
               onClick={() => setBillingCycle("month")}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                 billingCycle === "month"
                   ? "bg-[#1E293B] text-white shadow-sm"
                   : "text-[#475569] hover:text-[#0F172A]"
               }`}
             >
-              Facturation mensuelle
+              Mensuel
             </button>
 
             <button
               onClick={() => setBillingCycle("year")}
-              className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all cursor-pointer flex items-center gap-2 ${
+              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
                 billingCycle === "year"
                   ? "bg-[#FF6B35] text-white shadow-sm"
                   : "text-[#475569] hover:text-[#0F172A]"
               }`}
             >
-              <span>Facturation annuelle</span>
-              <span className="px-2 py-0.5 rounded-lg bg-[#1E293B] text-white text-[10px] font-black uppercase tracking-wider">
+              <span>Annuel</span>
+              <span className="px-1.5 py-0.5 rounded-md bg-[#1E293B] text-white text-[10px] font-black uppercase">
                 -48%
               </span>
             </button>
@@ -187,509 +182,354 @@ export default function PricingSection() {
         </div>
 
         {/* =========================================================================
-            PRICING CARDS GRID (3 Tiers)
+            PRICING CARDS GRID (3 Tiers, clean & balanced)
            ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch max-w-6xl mx-auto">
           {/* =========================================================================
               TIER 1 : FORMULE AUTONOME
              ========================================================================= */}
-          <div className="bg-white rounded-3xl border-2 border-[#1E293B] shadow-[6px_6px_0px_0px_#1E293B] p-6 sm:p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform relative">
+          <div className="bg-white rounded-3xl border-2 border-[#1E293B] shadow-[5px_5px_0px_0px_#1E293B] p-6 sm:p-7 flex flex-col justify-between hover:-translate-y-1 transition-all">
             <div>
-              {/* Badge */}
-              <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="px-3 py-1 rounded-full bg-[#F1F5F9] border border-[#CBD5E1] text-[#1E293B] text-xs font-extrabold uppercase tracking-wider">
-                  Formule 100% Autonome
+              {/* Header tags */}
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#F1F5F9] border border-[#CBD5E1] text-[#1E293B] text-xs font-bold uppercase tracking-wider">
+                  Autonomie
                 </span>
-                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-300">
+                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-300">
                   Essai 7j offert
                 </span>
               </div>
 
-              {/* Title & Description */}
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#0F172A]">
-                Formule Autonome
+              {/* Title & Tagline */}
+              <h3 className="text-2xl font-extrabold font-display text-[#0F172A]">
+                Autonome
               </h3>
-              <p className="text-xs sm:text-sm text-[#475569] mt-2 font-medium leading-relaxed">
-                Idéal pour avancer à votre propre rythme avec l'application, les exercices quotidiens et les générateurs d'actifs.
+              <p className="text-xs sm:text-sm text-[#64748B] mt-1">
+                Pour avancer seul, à votre propre rythme, avec l'application complète.
               </p>
 
-              {/* Price */}
-              <div className="mt-6 p-4 rounded-2xl bg-[#F8FAFC] border-2 border-[#E2E8F0]">
+              {/* Price Display */}
+              <div className="mt-5 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
                 {billingCycle === "month" ? (
                   <div>
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="text-4xl sm:text-5xl font-black text-[#0F172A] font-display">
-                        19 €
-                      </span>
-                      <span className="text-sm font-bold text-[#64748B]">/ mois</span>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-4xl font-black text-[#0F172A] font-display">19 €</span>
+                      <span className="text-xs font-bold text-[#64748B]">/ mois</span>
                     </div>
-                    <p className="text-xs text-[#64748B] mt-1 font-medium">
-                      Sans engagement, annulable à tout moment en 1 clic.
-                    </p>
+                    <p className="text-[11px] text-[#64748B] mt-0.5">Sans engagement, résiliable en 1 clic</p>
                   </div>
                 ) : (
                   <div>
-                    <div className="flex items-baseline gap-1.5">
-                      <span className="text-4xl sm:text-5xl font-black text-[#0F172A] font-display">
-                        119 €
-                      </span>
-                      <span className="text-sm font-bold text-[#64748B]">/ an</span>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-4xl font-black text-[#0F172A] font-display">119 €</span>
+                      <span className="text-xs font-bold text-[#64748B]">/ an</span>
+                      <span className="text-[11px] font-bold text-[#D63900] ml-1">(9,90 €/mois)</span>
                     </div>
-                    <p className="text-xs text-[#D63900] mt-1 font-extrabold">
-                      Soit 9,90 € / mois (économisez 109 € / an).
-                    </p>
+                    <p className="text-[11px] text-[#D63900] mt-0.5 font-bold">Économisez 109 € par an</p>
                   </div>
                 )}
               </div>
 
-              {/* Feature list */}
-              <div className="mt-6 space-y-3">
-                <div className="text-xs font-extrabold uppercase tracking-wider text-[#1E293B] pb-1">
-                  Ce qui est inclus :
-                </div>
-
-                <ul className="space-y-2.5 text-xs sm:text-sm text-[#334155]">
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Accès illimité</strong> à l'application web & mobile
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>60 leçons interactives</strong> calibrées en 5 min chrono
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Minuteur 5 min</strong> et compteur de séries (streaks)
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Générateur d'actifs</strong> : One-Pager, devis type, modèle CGV
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Export PDF illimité</strong> de votre Dossier de Création
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-[#64748B]">
-                    <Check className="w-4 h-4 text-emerald-600 stroke-[3] shrink-0 mt-0.5" />
-                    <span>Mises à jour pédagogiques continues 2026</span>
-                  </li>
-                </ul>
-              </div>
+              {/* Concise Feature List */}
+              <ul className="mt-5 space-y-2.5 text-xs sm:text-sm text-[#334155]">
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Accès complet app web & mobile</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>60 micro-leçons (5 min / jour)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Minuteur, séries & points XP</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Générateurs (One-Pager, devis, CGV)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Export PDF du dossier de création</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Action buttons */}
-            <div className="mt-8 pt-6 border-t-2 border-[#F1F5F9] space-y-3">
+            {/* CTA */}
+            <div className="mt-6 pt-5 border-t border-[#F1F5F9]">
               <a
-                href={
-                  billingCycle === "month"
-                    ? PAYMENT_URLS.autonome_monthly
-                    : PAYMENT_URLS.autonome_annual
-                }
-                className="w-full py-4 px-6 rounded-2xl bg-[#1E293B] hover:bg-[#334155] text-white font-extrabold text-sm sm:text-base border-2 border-[#1E293B] shadow-[4px_4px_0px_0px_#FF6B35] hover:shadow-[2px_2px_0px_0px_#FF6B35] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                href={billingCycle === "month" ? PAYMENT_URLS.autonome_monthly : PAYMENT_URLS.autonome_annual}
+                className="w-full py-3 px-4 rounded-xl bg-[#1E293B] hover:bg-[#334155] text-white font-bold text-sm border-2 border-[#1E293B] shadow-[3px_3px_0px_0px_#FF6B35] hover:shadow-[1px_1px_0px_0px_#FF6B35] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 text-center"
               >
-                <span>
-                  {billingCycle === "month"
-                    ? "Démarrer l'accès mensuel (19 €)"
-                    : "Démarrer l'accès annuel (119 €)"}
-                </span>
+                <span>{billingCycle === "month" ? "Démarrer (19 € / mois)" : "Démarrer (119 € / an)"}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-
-              <button
-                onClick={() => handleOpenContact("Formule Autonome")}
-                className="w-full py-2.5 text-xs font-bold text-[#64748B] hover:text-[#0F172A] transition-colors cursor-pointer flex items-center justify-center gap-1.5"
-              >
-                <HelpCircle className="w-3.5 h-3.5" />
-                <span>Poser une question sur cette formule</span>
-              </button>
             </div>
           </div>
 
           {/* =========================================================================
-              TIER 2 : PROMOTION GUIDEE (BOOTCAMP 30 JOURS) - HIGHLIGHTED
+              TIER 2 : PROMOTION GUIDEE (FEATURED)
              ========================================================================= */}
-          <div className="bg-[#FFF2EB] rounded-3xl border-2 border-[#1E293B] shadow-[8px_8px_0px_0px_#1E293B] p-6 sm:p-8 flex flex-col justify-between relative ring-2 ring-[#FF6B35] hover:-translate-y-1 transition-transform">
+          <div className="bg-[#FFF2EB] rounded-3xl border-2 border-[#1E293B] shadow-[7px_7px_0px_0px_#1E293B] p-6 sm:p-7 flex flex-col justify-between relative ring-2 ring-[#FF6B35] hover:-translate-y-1 transition-all">
             {/* Top Ribbon */}
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FF6B35] text-white text-xs font-black uppercase tracking-wider px-4 py-1.5 rounded-full border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B] flex items-center gap-1.5 whitespace-nowrap">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FF6B35] text-white text-[11px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#1E293B] flex items-center gap-1.5 whitespace-nowrap">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Le plus choisi • Session 25 places</span>
+              <span>Le plus choisi • 25 places</span>
             </div>
 
             <div>
-              {/* Badge */}
-              <div className="flex items-center justify-between gap-2 mb-4 mt-2">
-                <span className="px-3 py-1 rounded-full bg-[#1E293B] text-white text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5">
-                  <Users className="w-3.5 h-3.5 text-[#FF6B35]" />
-                  <span>Bootcamp 30 Jours</span>
+              {/* Header tags */}
+              <div className="flex items-center justify-between gap-2 mb-3 mt-1">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#1E293B] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+                  <Users className="w-3 h-3 text-[#FF6B35]" />
+                  <span>Collectif</span>
                 </span>
-                <span className="text-xs font-black text-[#D63900] uppercase">
-                  Promotion #1
+                <span className="text-xs font-extrabold text-[#D63900]">
+                  Bootcamp 30 Jours
                 </span>
               </div>
 
-              {/* Title & Description */}
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#0F172A]">
+              {/* Title & Tagline */}
+              <h3 className="text-2xl font-extrabold font-display text-[#0F172A]">
                 Promotion Guidée
               </h3>
-              <p className="text-xs sm:text-sm text-[#475569] mt-2 font-medium leading-relaxed">
-                L'émulation d'une cohorte à taille humaine pour passer de l'idée aux premiers clients avec revues hebdomadaires.
+              <p className="text-xs sm:text-sm text-[#475569] mt-1">
+                L'énergie d'un petit groupe pour valider son offre avec retours réguliers.
               </p>
 
-              {/* Price */}
-              <div className="mt-6 p-4 rounded-2xl bg-white border-2 border-[#1E293B] shadow-[3px_3px_0px_0px_#FF6B35]">
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-4xl sm:text-5xl font-black text-[#0F172A] font-display">
-                    199 €
-                  </span>
-                  <span className="text-sm font-bold text-[#64748B]">/ session</span>
+              {/* Price Display */}
+              <div className="mt-5 p-3.5 rounded-2xl bg-white border-2 border-[#1E293B] shadow-[2px_2px_0px_0px_#FF6B35]">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl font-black text-[#0F172A] font-display">199 €</span>
+                  <span className="text-xs font-bold text-[#64748B]">/ session</span>
                 </div>
-                <p className="text-xs text-[#D63900] mt-1 font-extrabold flex items-center gap-1">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>Inclut 3 mois d'accès SaaS complet offerts</span>
+                <p className="text-[11px] text-[#D63900] mt-0.5 font-bold flex items-center gap-1">
+                  <Sparkles className="w-3 h-3" />
+                  <span>Paiement unique • 3 mois d'accès app inclus</span>
                 </p>
               </div>
 
-              {/* Feature list */}
-              <div className="mt-6 space-y-3">
-                <div className="text-xs font-extrabold uppercase tracking-wider text-[#1E293B] pb-1 flex items-center gap-1.5">
-                  <Zap className="w-3.5 h-3.5 text-[#FF6B35]" />
-                  <span>Tout le contenu autonome, plus :</span>
-                </div>
-
-                <ul className="space-y-2.5 text-xs sm:text-sm text-[#0F172A]">
-                  <li className="flex items-start gap-2.5 font-bold">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Groupe privé d'entraide</strong> (cohorte de 25 créateurs max)
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5 font-bold">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>4 revues asynchrones par semaine</strong> de vos livrables par notre équipe
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Sprint hebdomadaire en direct</strong> pour débloquer les freins
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Feedback personnalisé</strong> sur votre One-Pager et vos tarifs
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Cérémonie de lancement</strong> et mise en avant de votre activité
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              {/* Concise Feature List */}
+              <ul className="mt-5 space-y-2.5 text-xs sm:text-sm text-[#0F172A]">
+                <li className="flex items-center gap-2 font-bold">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Tout le contenu Autonome inclus</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Groupe privé (25 créateurs max)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>4 revues par semaine de vos livrables</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Sprint live hebdo de déblocage</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Feedback personnalisé sur votre offre</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Action buttons */}
-            <div className="mt-8 pt-6 border-t-2 border-[#FFD6C4] space-y-3">
+            {/* CTA */}
+            <div className="mt-6 pt-5 border-t border-[#FFD6C4]">
               <a
                 href={PAYMENT_URLS.promotion_guidee}
-                className="w-full py-4 px-6 rounded-2xl bg-[#FF6B35] hover:bg-[#E55A25] text-white font-extrabold text-sm sm:text-base border-2 border-[#1E293B] shadow-[4px_4px_0px_0px_#1E293B] hover:shadow-[2px_2px_0px_0px_#1E293B] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                className="w-full py-3 px-4 rounded-xl bg-[#FF6B35] hover:bg-[#E55A25] text-white font-bold text-sm border-2 border-[#1E293B] shadow-[3px_3px_0px_0px_#1E293B] hover:shadow-[1px_1px_0px_0px_#1E293B] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 text-center"
               >
-                <span>Rejoindre la promotion guidée (199 €)</span>
+                <span>Rejoindre la promotion (199 €)</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
-
-              <div className="flex items-center justify-between text-xs font-bold text-[#64748B] px-1">
-                <span>Places limitées (25 max)</span>
-                <button
-                  onClick={() => handleOpenContact("Promotion Guidée (Bootcamp 30 Jours)")}
-                  className="text-[#D63900] hover:underline cursor-pointer flex items-center gap-1"
-                >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>Question sur la promo</span>
-                </button>
-              </div>
             </div>
           </div>
 
           {/* =========================================================================
-              TIER 3 : ACCOMPAGNEMENT INDIVIDUEL PRO
+              TIER 3 : ACCOMPAGNEMENT PRO
              ========================================================================= */}
-          <div className="bg-white rounded-3xl border-2 border-[#1E293B] shadow-[6px_6px_0px_0px_#1E293B] p-6 sm:p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform relative">
+          <div className="bg-white rounded-3xl border-2 border-[#1E293B] shadow-[5px_5px_0px_0px_#1E293B] p-6 sm:p-7 flex flex-col justify-between hover:-translate-y-1 transition-all">
             <div>
-              {/* Badge */}
-              <div className="flex items-center justify-between gap-2 mb-4">
-                <span className="px-3 py-1 rounded-full bg-[#1E293B] text-white text-xs font-extrabold uppercase tracking-wider flex items-center gap-1.5">
-                  <UserCheck className="w-3.5 h-3.5 text-[#FF6B35]" />
-                  <span>Mentorat Sur-Mesure</span>
+              {/* Header tags */}
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#1E293B] text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1">
+                  <UserCheck className="w-3 h-3 text-[#FF6B35]" />
+                  <span>1-on-1</span>
                 </span>
-                <span className="text-xs font-bold text-[#D63900] bg-[#FFF2EB] px-2.5 py-0.5 rounded-full border border-[#FF6B35]">
-                  Individuel 1-on-1
+                <span className="text-[11px] font-bold text-[#D63900] bg-[#FFF2EB] px-2 py-0.5 rounded-full border border-[#FF6B35]">
+                  Sur-Mesure
                 </span>
               </div>
 
-              {/* Title & Description */}
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#0F172A]">
+              {/* Title & Tagline */}
+              <h3 className="text-2xl font-extrabold font-display text-[#0F172A]">
                 Accompagnement Pro
               </h3>
-              <p className="text-xs sm:text-sm text-[#475569] mt-2 font-medium leading-relaxed">
-                Pour les porteurs de projet qui veulent un regard expert direct, une validation personnalisée et un déblocage prioritaire.
+              <p className="text-xs sm:text-sm text-[#64748B] mt-1">
+                Mentorat individuel direct pour sécuriser chaque étape de votre lancement.
               </p>
 
-              {/* Price */}
-              <div className="mt-6 p-4 rounded-2xl bg-[#F8FAFC] border-2 border-[#E2E8F0]">
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-4xl sm:text-5xl font-black text-[#0F172A] font-display">
-                    390 €
-                  </span>
-                  <span className="text-sm font-bold text-[#64748B]">/ session</span>
+              {/* Price Display */}
+              <div className="mt-5 p-3.5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl font-black text-[#0F172A] font-display">390 €</span>
+                  <span className="text-xs font-bold text-[#64748B]">/ session</span>
                 </div>
-                <p className="text-xs text-[#475569] mt-1 font-semibold">
-                  Inclut 6 mois d'accès SaaS complet + suivi individuel dédié.
+                <p className="text-[11px] text-[#64748B] mt-0.5 font-medium">
+                  Paiement unique • 6 mois d'accès app inclus
                 </p>
               </div>
 
-              {/* Feature list */}
-              <div className="mt-6 space-y-3">
-                <div className="text-xs font-extrabold uppercase tracking-wider text-[#1E293B] pb-1">
-                  Ce qui est inclus en plus :
-                </div>
-
-                <ul className="space-y-2.5 text-xs sm:text-sm text-[#334155]">
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Diagnostic individuel 1-on-1 (45 min)</strong> en visioconférence
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Relecture ligne à ligne de votre offre</strong> et de votre proposition
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Validation de votre dossier INPI</strong> et démarches d'immatriculation
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Support prioritaire direct 5j/7</strong> par messagerie dédiée
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0 mt-0.5" />
-                    <span>
-                      <strong>Garantie sérénité</strong> : itérations jusqu'à validation complète
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              {/* Concise Feature List */}
+              <ul className="mt-5 space-y-2.5 text-xs sm:text-sm text-[#334155]">
+                <li className="flex items-center gap-2 font-bold">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Tout le contenu Promotion inclus</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>1 diagnostic individuel en visio (45 min)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Relecture ligne à ligne de votre offre</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Validation de votre dossier INPI</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-[#FF6B35] stroke-[3] shrink-0" />
+                  <span>Support direct dédié par messagerie (5j/7)</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Action buttons */}
-            <div className="mt-8 pt-6 border-t-2 border-[#F1F5F9] space-y-3">
+            {/* CTA */}
+            <div className="mt-6 pt-5 border-t border-[#F1F5F9]">
               <a
                 href={PAYMENT_URLS.accompagnement_pro}
-                className="w-full py-4 px-6 rounded-2xl bg-[#1E293B] hover:bg-[#334155] text-white font-extrabold text-sm sm:text-base border-2 border-[#1E293B] shadow-[4px_4px_0px_0px_#1E293B] hover:shadow-[2px_2px_0px_0px_#1E293B] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer text-center"
+                className="w-full py-3 px-4 rounded-xl bg-[#1E293B] hover:bg-[#334155] text-white font-bold text-sm border-2 border-[#1E293B] shadow-[3px_3px_0px_0px_#FF6B35] hover:shadow-[1px_1px_0px_0px_#FF6B35] active:translate-y-0.5 transition-all flex items-center justify-center gap-2 text-center"
               >
-                <span>Réserver mon accompagnement (390 €)</span>
+                <span>Réserver le mentorat (390 €)</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
+            </div>
+          </div>
+        </div>
 
-              <button
-                onClick={() => handleOpenContact("Accompagnement Individuel Pro")}
-                className="w-full py-2.5 rounded-xl border border-[#CBD5E1] bg-white hover:bg-[#F8FAFC] text-xs font-bold text-[#0F172A] transition-colors cursor-pointer flex items-center justify-center gap-1.5"
-              >
-                <MessageSquare className="w-3.5 h-3.5 text-[#FF6B35]" />
-                <span>Demander un échange préalable / Devis</span>
-              </button>
+        {/* Contact help line */}
+        <div className="text-center mt-8">
+          <button
+            onClick={() => handleOpenContact("Demande de conseil / Devis")}
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#475569] hover:text-[#FF6B35] transition-colors cursor-pointer"
+          >
+            <HelpCircle className="w-4 h-4 text-[#FF6B35]" />
+            <span>Une question avant de choisir ? Discuter avec nous ou demander un devis</span>
+          </button>
+        </div>
+
+        {/* =========================================================================
+            TRUST / REASSURANCE BAR
+           ========================================================================= */}
+        <div className="mt-12 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="p-3.5 rounded-2xl bg-white border border-[#E2E8F0] flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
+              <ShieldCheck className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-[#0F172A]">Paiement 100% sécurisé</div>
+              <div className="text-[11px] text-[#64748B]">Chiffrement SSL & 3D Secure</div>
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-2xl bg-white border border-[#E2E8F0] flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-[#FFF2EB] text-[#D63900] flex items-center justify-center shrink-0">
+              <Award className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-[#0F172A]">Garantie 14 jours</div>
+              <div className="text-[11px] text-[#64748B]">Satisfait ou remboursé</div>
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-2xl bg-white border border-[#E2E8F0] flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg bg-[#F1F5F9] text-[#1E293B] flex items-center justify-center shrink-0">
+              <FileCheck className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-[#0F172A]">Facture avec TVA</div>
+              <div className="text-[11px] text-[#64748B]">Déductible en frais pro</div>
             </div>
           </div>
         </div>
 
         {/* =========================================================================
-            TRUST & REASSURANCE BAR
+            STREAMLINED COMPARISON TABLE (COLLAPSIBLE)
            ========================================================================= */}
-        <div className="mt-14 max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="p-4 rounded-2xl bg-white border-2 border-[#E2E8F0] flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-700 flex items-center justify-center shrink-0">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <div className="text-left">
-              <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
-                Paiement Sécurisé
-              </h4>
-              <p className="text-xs text-[#64748B] mt-0.5">
-                Règlement par CB sécurisé via Baget (protocole SSL / 3D Secure).
-              </p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-white border-2 border-[#E2E8F0] flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-[#FFF2EB] border border-[#FF6B35] text-[#D63900] flex items-center justify-center shrink-0">
-              <Award className="w-5 h-5" />
-            </div>
-            <div className="text-left">
-              <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
-                Garantie 14 Jours
-              </h4>
-              <p className="text-xs text-[#64748B] mt-0.5">
-                Satisfait ou remboursé sans justification sur toutes nos offres.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-white border-2 border-[#E2E8F0] flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-[#F1F5F9] border border-[#CBD5E1] text-[#1E293B] flex items-center justify-center shrink-0">
-              <FileCheck className="w-5 h-5" />
-            </div>
-            <div className="text-left">
-              <h4 className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
-                Facturation Pro Conforme
-              </h4>
-              <p className="text-xs text-[#64748B] mt-0.5">
-                Facture avec TVA émise automatiquement pour vos frais professionnels.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* =========================================================================
-            DETAILED COMPARISON TABLE TOGGLE
-           ========================================================================= */}
-        <div className="mt-14 max-w-5xl mx-auto">
+        <div className="mt-10 max-w-4xl mx-auto">
           <button
             onClick={() => setShowComparisonTable(!showComparisonTable)}
-            className="w-full py-4 px-6 rounded-2xl bg-white border-2 border-[#1E293B] shadow-[4px_4px_0px_0px_#1E293B] hover:bg-[#F8FAFC] transition-all cursor-pointer flex items-center justify-between gap-4 text-left"
+            className="w-full py-3 px-5 rounded-2xl bg-white border-2 border-[#1E293B] shadow-[3px_3px_0px_0px_#1E293B] hover:bg-[#F8FAFC] transition-all cursor-pointer flex items-center justify-between gap-3 text-left"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-xl bg-[#FFF2EB] border border-[#FF6B35] text-[#D63900] flex items-center justify-center shrink-0">
-                <Layers className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="font-extrabold text-sm sm:text-base text-[#0F172A] block">
-                  {showComparisonTable
-                    ? "Masquer le tableau comparatif détaillé"
-                    : "Afficher le tableau comparatif complet des 3 formules"}
-                </span>
-                <span className="text-xs text-[#64748B]">
-                  Comparez fonctionnalité par fonctionnalité les 3 paliers d'accompagnement
-                </span>
-              </div>
+            <div className="flex items-center gap-2.5">
+              <Layers className="w-4 h-4 text-[#FF6B35]" />
+              <span className="font-bold text-xs sm:text-sm text-[#0F172A]">
+                {showComparisonTable
+                  ? "Masquer le tableau comparatif détaillé"
+                  : "Comparer les 3 formules en détail"}
+              </span>
             </div>
 
             <span
-              className={`p-2 rounded-xl border border-[#CBD5E1] transition-transform duration-200 shrink-0 ${
+              className={`p-1 rounded-lg border border-[#CBD5E1] transition-transform duration-200 shrink-0 ${
                 showComparisonTable ? "rotate-180 bg-[#1E293B] text-white" : "bg-[#F8FAFC] text-[#1E293B]"
               }`}
             >
-              <ChevronDown className="w-4 h-4" />
+              <ChevronDown className="w-3.5 h-3.5" />
             </span>
           </button>
 
           {showComparisonTable && (
-            <div className="mt-6 bg-white rounded-3xl border-2 border-[#1E293B] shadow-[6px_6px_0px_0px_#1E293B] overflow-hidden animate-fade-in">
+            <div className="mt-4 bg-white rounded-2xl border-2 border-[#1E293B] shadow-[4px_4px_0px_0px_#1E293B] overflow-hidden animate-fade-in">
               <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                <table className="w-full text-left border-collapse text-xs">
                   <thead>
-                    <tr className="bg-[#1E293B] text-white border-b-2 border-[#1E293B]">
-                      <th className="py-4 px-6 font-display text-sm font-bold w-2/5">
-                        Fonctionnalités & Services
+                    <tr className="bg-[#1E293B] text-white">
+                      <th className="py-3 px-4 font-bold w-2/5">Fonctionnalité</th>
+                      <th className="py-3 px-3 font-bold text-center w-1/5">Autonome</th>
+                      <th className="py-3 px-3 font-bold text-center bg-[#FF6B35] text-white w-1/5">
+                        Promotion
                       </th>
-                      <th className="py-4 px-4 font-bold text-center w-1/5">
-                        Formule Autonome
-                      </th>
-                      <th className="py-4 px-4 font-bold text-center bg-[#FF6B35] text-white w-1/5">
-                        Promotion Guidée
-                      </th>
-                      <th className="py-4 px-4 font-bold text-center w-1/5">
-                        Accompagnement Pro
-                      </th>
+                      <th className="py-3 px-3 font-bold text-center w-1/5">Pro</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#E2E8F0]">
                     {comparisonRows.map((cat, catIdx) => (
-                      <>
-                        <tr key={`cat-${catIdx}`} className="bg-[#F8FAFC]">
+                      <React.Fragment key={`cat-group-${catIdx}`}>
+                        <tr className="bg-[#F8FAFC]">
                           <td
                             colSpan={4}
-                            className="py-3 px-6 text-xs font-black uppercase tracking-wider text-[#1E293B] border-t border-b border-[#CBD5E1]"
+                            className="py-2 px-4 text-[11px] font-black uppercase tracking-wider text-[#1E293B] border-t border-b border-[#CBD5E1]"
                           >
                             {cat.category}
                           </td>
                         </tr>
                         {cat.features.map((feat, featIdx) => (
-                          <tr
-                            key={`feat-${catIdx}-${featIdx}`}
-                            className="hover:bg-[#FFF2EB]/30 transition-colors"
-                          >
-                            <td className="py-3.5 px-6 font-medium text-[#0F172A]">
-                              {feat.name}
-                            </td>
-                            <td className="py-3.5 px-4 text-center text-[#475569] font-semibold">
-                              {feat.autonome}
-                            </td>
-                            <td className="py-3.5 px-4 text-center font-bold text-[#D63900] bg-[#FFF2EB]/60">
+                          <tr key={`feat-${catIdx}-${featIdx}`} className="hover:bg-[#FFF2EB]/20">
+                            <td className="py-2.5 px-4 font-medium text-[#0F172A]">{feat.name}</td>
+                            <td className="py-2.5 px-3 text-center text-[#64748B]">{feat.autonome}</td>
+                            <td className="py-2.5 px-3 text-center font-bold text-[#D63900] bg-[#FFF2EB]/40">
                               {feat.guidee}
                             </td>
-                            <td className="py-3.5 px-4 text-center font-bold text-[#0F172A]">
-                              {feat.pro}
-                            </td>
+                            <td className="py-2.5 px-3 text-center font-bold text-[#0F172A]">{feat.pro}</td>
                           </tr>
                         ))}
-                      </>
+                      </React.Fragment>
                     ))}
                   </tbody>
                 </table>
-              </div>
-
-              {/* Table Footer with direct action triggers */}
-              <div className="p-6 bg-[#F8FAFC] border-t-2 border-[#E2E8F0] grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-xs font-bold text-[#0F172A] mb-1">Formule Autonome</div>
-                  <a
-                    href={PAYMENT_URLS.autonome_monthly}
-                    className="inline-block px-4 py-2 rounded-xl bg-[#1E293B] text-white text-xs font-bold hover:bg-[#334155] transition-colors"
-                  >
-                    Choisir Autonome (19€/m)
-                  </a>
-                </div>
-
-                <div>
-                  <div className="text-xs font-bold text-[#D63900] mb-1">Promotion Guidée</div>
-                  <a
-                    href={PAYMENT_URLS.promotion_guidee}
-                    className="inline-block px-4 py-2 rounded-xl bg-[#FF6B35] text-white text-xs font-bold hover:bg-[#E55A25] transition-colors"
-                  >
-                    Rejoindre la Promotion (199€)
-                  </a>
-                </div>
-
-                <div>
-                  <div className="text-xs font-bold text-[#0F172A] mb-1">Accompagnement Pro</div>
-                  <a
-                    href={PAYMENT_URLS.accompagnement_pro}
-                    className="inline-block px-4 py-2 rounded-xl bg-[#1E293B] text-white text-xs font-bold hover:bg-[#334155] transition-colors"
-                  >
-                    Réserver Pro (390€)
-                  </a>
-                </div>
               </div>
             </div>
           )}
