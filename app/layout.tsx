@@ -27,6 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${display.variable} ${body.variable}`}>
+      <head>
+        {/* Baget signup widget. async so a slow or unreachable relay can never hold up the page. */}
+        <script
+          async
+          src="https://signup-relay.vercel.app/w.js"
+          data-key="baget-cinqminutes-65a327-vercel-app.ohplkUeWmluz71nTdUC5iHUpxujjEkFf"
+        />
+      </head>
       <body className="antialiased min-h-screen flex flex-col bg-[#F8FAFC] text-[#0F172A]">
         {children}
       </body>

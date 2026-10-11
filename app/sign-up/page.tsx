@@ -8,6 +8,12 @@ import { Sparkles, ArrowRight, CheckCircle2, Lock, Mail, User, AlertCircle, Load
 
 const AFTER_AUTH_DEFAULT = "/dashboard";
 
+declare global {
+  interface Window {
+    baget?: { signup: (email: string, name?: string) => void };
+  }
+}
+
 export default function SignUpPage() {
   const router = useRouter();
   const [name, setName] = useState("");
@@ -27,12 +33,17 @@ export default function SignUpPage() {
         ? requested
         : AFTER_AUTH_DEFAULT;
 
-    const { error: signUpError } = await authClient.signUp.email({ email, password, name });
+    const { data, error: signUpError } = await authClient.signUp.email({ email, password, name });
     if (signUpError) {
       setError(signUpError.message ?? "Une erreur est survenue lors de la création de votre compte.");
       setPending(false);
       return;
     }
+    // The account now exists. Report the signup to the Baget widget, fire-and-forget:
+    // a missing or failing widget must never block or break the redirect below.
+    try {
+      window.baget?.signup(data?.user?.email ?? email);
+    } catch {}
     router.push(callbackUrl);
   }
 
